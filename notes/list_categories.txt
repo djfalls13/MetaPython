@@ -1,0 +1,13 @@
+
+    1: Basic Core Python / Misc.
+
+    2: Python GUI (Tkinter)
+
+    3: Web Development (Django)
+
+    4: Python Web Scraping
+
+
+
+
+         0: Exit

@@ -1,0 +1,4 @@
+for i in {1..51};
+do
+    touch "$i".py
+done
