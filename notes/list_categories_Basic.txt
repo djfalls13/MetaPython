@@ -12,10 +12,9 @@
     7: Functions
     8: User INPUT & Strings
     9: File I/O
-    10. Classes & Objects
-    11. Class Inheritance &
-         POLYMORPHISM
-
+    10. Classes, Inheritance,
+        Super Class, & POLYMORPHISM
+    11. *args & Kwargs 
     12. Text ANSI Color
 
 

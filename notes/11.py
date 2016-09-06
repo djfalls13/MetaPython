@@ -1,57 +1,76 @@
-# INHERITANCE -------------
-# You can inherit all of the variables and methods from another class
+#ARGS --------------
+'''
+# This first version will not work
+class argsGeneric():
+    def normal_args(self, stuff ):
+        for i in stuff:
+            print(i)
+x = argsGeneric()
+x.normal_args('one', 'two','three')
+'''
 
-class Dog(Animal):
-    __owner = None
+#This version works using the special *args to accept multiple arguments
 
-    def __init__(self, name, height, weight, sound, owner):
-        self.__owner = owner
-        self.__animal_type = None
+grocery_list = ['Juice', 'Tomatoes', 'Potatoes', 'Bananas']
+original_list = ['Juice', 'Tomatoes', 'Potatoes', 'Bananas'] #untouched copy of grocery_list
 
-        # How to call the super class constructor
-        super(Dog, self).__init__(name, height, weight, sound)
+dinner = ['Eggs','Mushrooms','Steak','Onion','Peppers']
 
-    def set_owner(self, owner):
-        self.__owner = owner
+lunch = ['Mayo','Ham','Bread','Lettuce']
 
-    def get_owner(self):
-        return self.__owner
+class Munchies():
 
-    def get_type(self):
-        print("Dog")
-
-    # We can overwrite functions in the super class
-    def toString(self):
-        return "{} is {} cm tall and {} kilograms and says {}. His owner is {}".format(self.get_name(),
-                                                                                       self.get_height(),
-                                                                                       self.get_weight(),
-                                                                                       self.get_sound(), self.__owner)
-
-    # You don't have to require attributes to be sent
-    # This allows for method overloading
-    def multiple_sounds(self, how_many=None):
-        if how_many is None:
-            print(self.get_sound)
-        else:
-            print(self.get_sound() * how_many)
+    def normal_args(self, *args ):
 
 
-spot = Dog("Spot", 53, 27, "Ruff", "Derek")
+        for i in args:
+            grocery_list.append(i)
+            print(i)
 
-print(spot.toString())
+    def foodfunction(self, morefood):
+        for j in range(len(morefood)):  # Iterates through morefood List and appends it to grocery_list
+            x.normal_args(morefood[j])
+
+x = Munchies()
+
+x.foodfunction(dinner)
+
+print('This is the original list' , original_list)
+print('This is the list appended with Dinner' , grocery_list)
+x.foodfunction(lunch)
+print('This is the list appended with Lunch' , grocery_list)
 
 
-# Polymorphism allows use to refer to objects as their super class
-# and the correct functions are called automatically
+# KWARGS --------------
 
-class AnimalTesting:
-    def get_type(self, animal):
-        animal.get_type()
+band = {}
+
+tempdict = {}
+
+class kwargsGeneric():
+    def kwargs_example(self, **kwargs):
+        for key, value in kwargs.items():
+            print(key, value)
+            band[key] = value
+
+x = kwargsGeneric()
+
+i = 0
+while i < 3:
+
+    a = input('Band Name: ')
+
+    b = input('Genre: ')
+
+    tempdict[a] = b
+
+    print(tempdict)
+
+    x.kwargs_example( **tempdict )
+
+    i += 1
+
+print(band)
 
 
-test_animals = AnimalTesting()
-
-test_animals.get_type(cat)
-test_animals.get_type(spot)
-
-spot.multiple_sounds(4)
+x.kwargs_example(**band)

@@ -23,7 +23,7 @@ def metatitleshort():
                                         A Python Syntax Reference Framework
                                                     Dan Falls
                                                         ''')
-    print("\033[1;37;40m \\")  # Return to default text
+    print("\033[1;37;40m ")  # Return to default text
 
 
 def metatitle():                                        #Function holding Main Title and Description
@@ -57,7 +57,7 @@ def metatitle():                                        #Function holding Main T
     print(desctuple[0].center(120))
     print(desctuple[1].center(120))
     print(desctuple[2].center(120))
-    print("\033[1;37;40m \\")  # Return to default text
+    print("\033[1;37;40m ")  # Return to default text
 
     #print(desctuple[3].center(100),'\n')
 
@@ -91,7 +91,7 @@ while True:
         metatitleshort()  # Loads Title minus credits
 
 
-        readlistfile = open('notes/list_categories.txt')  # Loads Categories List
+        readlistfile = open('notes/list_categories_.txt')  # Loads Categories List
         print(readlistfile.read())
         readlistfile.close()
 
