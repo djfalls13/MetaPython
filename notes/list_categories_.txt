@@ -1,11 +1,13 @@
 
     1: Basic Core Python / Misc.
 
-    2: Python GUI (Tkinter)
+    2: Python GUI (PyGame / Tkinter)
 
-    3: Web Development (Django)
+    3: Python Web Scraping
 
-    4: Python Web Scraping
+    4: Web Development (Django)
+
+
 
 
 
