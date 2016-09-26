@@ -7,9 +7,15 @@
 
     4: Web Development (Django)
 
+    5: Modules
+
+    6: Mini-Games
+
+    10: CookBook: Recipes
 
 
 
 
+		e: edit this list
 
-         0: Exit
+		0: Exit

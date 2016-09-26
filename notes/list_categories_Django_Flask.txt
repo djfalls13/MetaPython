@@ -1,4 +1,8 @@
+   Django / Flask:
 
 
+    40: Django Notes
+	41: Django Setup / Create App
 
-        0: Back to previous menu
+
+         0: Back to previous menu
